@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B1_L57_JS_Array</title>
+        <style>
+
+        </style>
+        <script>
+            //I can write JS code here.
+            //1. Function Definition is a one time process.
+            function myFunction(a,b){ //This is a formal argument/parameter.
+                //Function Body
+                //Every function may return something.
+                return a+b;
+            }
+
+            //2. Function Calling is a many time process.
+           let z = myFunction(10,20); //This is an actual argument.
+           var a = myFunction(50,20); //50,20 is an actual argument.
+           console.log(a);
+           console.log(z);
+
+           //There are two types of function.
+           //1. Predefine Function
+           //2. Userdefine Function
+
+           alert('Hello'); //It is predefine function.
+           alert(z); //It is predefine function.
+           myFunction(4,5); //It is userdefine function.
+
+           var b = myFunction(40,myFunction(50,20));
+           window.alert(b);
+
+           //What is Array?
+           //Array can store more than 1 value. When variable can store only 1 value.
+           var person1 = 'Raju';
+           var persons = ["Raju", "Shyam", "Anil",'Kiran', `Nandan`, 'Abhishek'];
+           console.log(persons);
+           console.log(persons[0]);
+           console.log(persons[3]);
+           console.log('Hello '+persons[3]+", How r u?");
+           console.log("Hello "+persons[2]+", How r u?");
+
+           //1.function definition
+           function greet(member){
+            //fucntion body
+            //Every fuction may return something.
+            console.log('Hello '+member+' How r u?')
+           }
+           //2.Function Calling
+           greet(persons[4]);
+
+           //For Loop
+           /*for(initialization;condition;increment/decrement){
+
+           }*/
+           for(var i=0;i<=5;i++){
+                greet(persons[i]);
+            }
+            // for(var i=0;i<=persons.length-1;i++){
+            //     greet(persons[i]);
+            // }
+
+            function greet2(s){
+                for(var i=0;i<=persons.length-1;i++){
+                    greet(persons[i]);
+                }
+            }
+            greet2(persons);
+        </script>
+    </head>
+    <body>
+        
+
+        <script>
+            //I can also write JS code here.
+        </script>
+    </body>
+</html>
